@@ -1,48 +1,130 @@
-# HR Nuwa Skill MVP
+# HR Skill Distiller
 
-HR版女娲 Skill 生成器：把咨询公司、标杆公司或HR软件公司的公开资料蒸馏成可安装的 HR 方法论 `SKILL.md`。
+把咨询公司、标杆企业或 HR 软件公司的公开资料，蒸馏成可调用的 company-specific HR 方法论 Skill。重点不是写公司介绍，而是形成一个能帮助用户解决组织、人才、绩效、薪酬、激励、领导力和 HR 转型问题的专家型 Skill。
 
-## Quick Start
+## 1. 搜索方法
 
-```powershell
-cd D:\AI-Workspace\hr-nuwa-skill
-python scripts/run_pipeline.py --target "Mercer" --type consulting_company --mode mvp
-```
+搜索采用“广覆盖 + 证据卡补洞”的方式。
 
-第一次运行会创建：
+第一层是 query matrix：
 
 ```text
-output/generated-skills/{target_slug}/
+Company Alias x HR Topic x Source Type x Time Range x Language
 ```
 
-然后把你搜集到的网页、PDF、视频、transcript、手工资料填入 `sources.csv`，再次运行 pipeline。
+会同时覆盖英文名、中文名、旧名称、子品牌、代表性方法论名称，以及组织设计、人才战略、绩效管理、薪酬激励、领导力、HR 数字化等主题。
 
-MVP 不自动绕过登录、验证码、会员或私密视频限制。
+第二层是 source-card-driven search。先定义最终蒸馏需要哪些证据卡，再围绕证据缺口搜索：
 
-## Optional: Install anysearch-skill
-
-当需要最大化搜索量时，可以把 GitHub 上的 `anysearch-skill` 安装到 Codex 技能目录，作为搜索增强层：
-
-```powershell
-$SkillRoot = "$env:USERPROFILE\.codex\skills"
-$TempDir = Join-Path $env:TEMP "anysearch-skill-install"
-New-Item -ItemType Directory -Force -Path $SkillRoot, $TempDir | Out-Null
-Invoke-WebRequest -Uri "https://github.com/anysearch-ai/anysearch-skill/archive/refs/heads/main.zip" -OutFile (Join-Path $TempDir "anysearch-skill.zip")
-Expand-Archive -Path (Join-Path $TempDir "anysearch-skill.zip") -DestinationPath $TempDir -Force
-Remove-Item -Recurse -Force (Join-Path $SkillRoot "anysearch") -ErrorAction SilentlyContinue
-Move-Item -Path (Join-Path $TempDir "anysearch-skill-main") -Destination (Join-Path $SkillRoot "anysearch")
-Test-Path (Join-Path $SkillRoot "anysearch\SKILL.md")
+```text
+official_methodology
+diagnostic_question
+tool_template
+case_practice
+video_transcript
+external_boundary
+china_localization
 ```
 
-安装后建议重启 Codex，再继续运行 HR Nuwa。
+当搜索量不足时，可以安装并调用 GitHub 上的 `anysearch-skill`，用它批量搜索网页、PDF、视频页、播客页和全文内容。搜索结果不会直接进入结论，必须先进入 `sources.csv`，再经过抓取、source card、证据评分和质量检查。
 
-## Example: Hay Group / Korn Ferry Hay
+视频和字幕是高权重来源。搜索会扩展到 YouTube、Bilibili、Vimeo、官网 webinar、podcast transcript、LinkedIn Events、Apple Podcasts、Spotify、小宇宙、喜马拉雅、SHRM、Gartner HR、HR Tech、WorldatWork、CIPD、ATD、Thinkers50、TED 和商学院公开课。
 
-`examples/hay/` contains a distilled Hay-style HR consulting skill as a reference case:
+## 2. 蒸馏框架
 
-- `examples/hay/SKILL.md`: distilled Hay/Korn Ferry Hay-style expert skill.
-- `examples/hay/distillation-report.md`: source expansion and distillation summary.
-- `examples/hay/quality-report.md`: quality gate result.
-- `examples/hay/sources.csv`: curated source index.
+蒸馏目标是生成一个可使用的 `SKILL.md`，而不是资料摘要。
 
-The full local run also produced large fetched web/PDF/transcript caches under `output/`. These runtime caches are intentionally excluded from Git because they are large and should be regenerated or stored separately when needed.
+核心流程：
+
+```text
+target name
+-> generate search plan
+-> collect web / PDF / video transcript / podcast / manual sources
+-> create source cards
+-> score evidence quality
+-> merge into research layers
+-> extract mental models, tools, workflows, anti-patterns
+-> build company-specific SKILL.md
+-> quality report
+```
+
+研究层分为七类：
+
+```text
+01 official methodology
+02 video transcripts
+03 case practices
+04 tools and frameworks
+05 external views
+06 timeline
+07 China localization
+```
+
+每条资料会被整理成 source card，提取：
+
+```text
+HR / organization methodology
+diagnostic question
+tool / template
+management action
+applicable scenario
+limitation
+China localization implication
+evidence level
+source confidence
+```
+
+最终 Skill 必须包含：
+
+```text
+role and boundary
+applicable scenarios
+core mental models
+tool layer
+diagnostic workflow
+evidence checklist
+deliverables
+anti-patterns
+localization guidance
+source and uncertainty boundary
+```
+
+如果资料不足，输出 Light Version 或 Usable Candidate，不硬编完整方法论。
+
+## 3. 蒸馏后运用方法
+
+生成后的 Skill 不是静态文章，而是解决问题时使用的专家工作流。
+
+使用 Skill 回答复杂问题时，必须先回看原始资料：
+
+```text
+sources.csv
+distillation report
+source cards
+web/PDF/transcript files
+quality report
+```
+
+回答要区分三类内容：
+
+```text
+Evidence-supported: 原始资料直接支持
+Synthesized judgment: 多个资料交叉归纳
+Professional inference: 基于方法论推演，但资料没有直接说明
+```
+
+输出通常包括：
+
+```text
+core judgment
+problem decomposition
+evidence consulted
+recommended tools
+solution design
+implementation steps
+governance mechanism
+risks and anti-patterns
+evidence boundary
+```
+
+`examples/hay/` 提供了一个 Hay Group / Korn Ferry Hay-style HR 咨询专家案例，展示如何从公开资料蒸馏出岗位价值评估、工作架构、薪酬绩效治理、领导力气候和人才评估工具层。
