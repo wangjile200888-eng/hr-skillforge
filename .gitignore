@@ -2,6 +2,7 @@
 .venv/
 __pycache__/
 *.pyc
+dist/
 
 # Runtime and fetched evidence caches can be large and noisy.
 output/**
@@ -14,4 +15,3 @@ output/**
 !output/generated-skills/hay/distillation-report.md
 !output/generated-skills/hay/quality-report.md
 !output/generated-skills/hay/sources.csv
-
