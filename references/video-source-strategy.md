@@ -1,6 +1,6 @@
 # Video Source Strategy
 
-Video is a first-class source for HR Nuwa. It captures how consultants explain frameworks, answer follow-up questions, sequence cases, and translate abstract models into management actions.
+Video is a first-class source for HR SkillForge. It captures how consultants explain frameworks, answer follow-up questions, sequence cases, and translate abstract models into management actions.
 
 ## Video Search Terms
 

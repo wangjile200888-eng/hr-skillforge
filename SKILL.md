@@ -1,13 +1,13 @@
 ---
-name: hr-nuwa-skill
-description: HR版女娲 Skill 生成器。用于把咨询公司、HR咨询公司、标杆公司或HR软件公司的公开资料蒸馏成可安装的 company-specific HR/组织/人才/绩效/激励方法论 SKILL.md。工作流强调多源公开资料、公开视频字幕、source cards、证据评分、七类研究文件、质量检查和 Light Version 边界。适用于用户要求“蒸馏某公司HR方法论”“生成某咨询公司专家Skill”“参考视频字幕生成HR智脑”“把公开资料变成可用HR方法论Agent”等场景。
+name: hr-skillforge
+description: HR SkillForge。用于把咨询公司、HR咨询公司、标杆公司或HR软件公司的公开资料蒸馏成可安装的 company-specific HR/组织/人才/绩效/激励方法论 SKILL.md。工作流强调多源公开资料、公开视频字幕、source cards、证据评分、七类研究文件、质量检查和 Light Version 边界。适用于用户要求“蒸馏某公司HR方法论”“生成某咨询公司专家Skill”“用视频字幕蒸馏HR方法论”“把公开资料变成可用HR方法论Agent”等场景。
 metadata:
-  short-description: HR咨询/标杆公司方法论蒸馏器
+  short-description: HR方法论Skill锻造器
 ---
 
-# HR Nuwa Skill
+# HR SkillForge
 
-本 Skill 是“HR咨询公司 / 标杆公司方法论蒸馏器”。目标不是总结公司介绍，而是生成一个可复制使用的 company-specific `SKILL.md`，让用户能用目标公司的公开方法论视角解决 HR、组织、人才、绩效、激励、领导力和变革管理问题。
+本 Skill 是“HR咨询公司 / 标杆公司方法论 Skill 锻造器”。目标不是总结公司介绍，而是生成一个可复制使用的 company-specific `SKILL.md`，让用户能用目标公司的公开方法论视角解决 HR、组织、人才、绩效、激励、领导力和变革管理问题。
 
 ## 核心原则
 
@@ -142,7 +142,7 @@ powershell -ExecutionPolicy Bypass -File "$env:USERPROFILE\.codex\skills\anysear
 项目默认路径：
 
 ```text
-D:/AI-Workspace/hr-nuwa-skill/
+PROJECT_ROOT/
 ```
 
 运行示例：

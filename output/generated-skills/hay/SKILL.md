@@ -247,14 +247,14 @@ Job family / 岗位族
 优先读取顺序：
 
 ```text
-1. D:/AI-Workspace/hr-nuwa-skill/output/generated-skills/hay/sources.csv
-2. D:/AI-Workspace/hr-nuwa-skill/output/generated-skills/hay/distillation-report.md
-3. D:/AI-Workspace/hr-nuwa-skill/output/generated-skills/hay/research_plan/anysearch_fetch_test/fetch_results.csv
-4. D:/AI-Workspace/hr-nuwa-skill/output/generated-skills/hay/source-cards/
-5. D:/AI-Workspace/hr-nuwa-skill/output/generated-skills/hay/sources/web/
-6. D:/AI-Workspace/hr-nuwa-skill/output/generated-skills/hay/sources/transcripts/
-7. D:/AI-Workspace/hr-nuwa-skill/output/generated-skills/hay/research_plan/anysearch_fetch_test/web/
-8. D:/AI-Workspace/hr-nuwa-skill/output/generated-skills/hay/research_plan/anysearch_fetch_test/pdf/
+1. PROJECT_ROOT/output/generated-skills/hay/sources.csv
+2. PROJECT_ROOT/output/generated-skills/hay/distillation-report.md
+3. PROJECT_ROOT/output/generated-skills/hay/research_plan/anysearch_fetch_test/fetch_results.csv
+4. PROJECT_ROOT/output/generated-skills/hay/source-cards/
+5. PROJECT_ROOT/output/generated-skills/hay/sources/web/
+6. PROJECT_ROOT/output/generated-skills/hay/sources/transcripts/
+7. PROJECT_ROOT/output/generated-skills/hay/research_plan/anysearch_fetch_test/web/
+8. PROJECT_ROOT/output/generated-skills/hay/research_plan/anysearch_fetch_test/pdf/
 ```
 
 按问题类型选择资料：

@@ -2,7 +2,7 @@
 
 ## Quality Gate Philosophy
 
-HR Nuwa is a methodology distiller, not a legal due-diligence system. The gate should prevent fake authority, but should not block useful distillation when enough high-signal public material exists.
+HR SkillForge is a methodology distiller, not a legal due-diligence system. The gate should prevent fake authority, but should not block useful distillation when enough high-signal public material exists.
 
 Use three quality levels:
 
@@ -63,4 +63,3 @@ Stop when:
 2. Core topic coverage reaches roughly 80%.
 3. Usable Candidate thresholds are met and user accepts candidate quality.
 4. Low-quality targets are marked Light Version rather than forced into full Skill.
-

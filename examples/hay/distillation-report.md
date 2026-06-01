@@ -2,7 +2,7 @@
 
 ## Status
 
-- Output skill: `D:\AI-Workspace\hr-nuwa-skill\output\generated-skills\hay\SKILL.md`
+- Output skill: `PROJECT_ROOT\output\generated-skills\hay\SKILL.md`
 - Installed skill: `C:\Users\Lenovo\.codex\skills\hay-consulting-expert\SKILL.md`
 - Version: Usable Candidate Plus
 

@@ -1,6 +1,8 @@
-# HR Skill Distiller
+# HR SkillForge
 
-把咨询公司、标杆企业或 HR 软件公司的公开资料，蒸馏成可调用的 company-specific HR 方法论 Skill。重点不是写公司介绍，而是形成一个能帮助用户解决组织、人才、绩效、薪酬、激励、领导力和 HR 转型问题的专家型 Skill。
+Forge company-specific HR expertise from public evidence.
+
+HR SkillForge 把咨询公司、标杆企业或 HR 软件公司的公开资料，锻造成可调用的 HR 方法论 Skill。重点不是写公司介绍，而是形成一个能帮助用户解决组织、人才、绩效、薪酬、激励、领导力和 HR 转型问题的专家型 Skill。
 
 ## 1. 搜索方法
 

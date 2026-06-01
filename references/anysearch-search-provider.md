@@ -1,6 +1,6 @@
 # anysearch Search Provider
 
-anysearch-skill is an optional search enhancement layer for HR Nuwa. Use it when the user asks to maximize source collection, run broad search, batch query many combinations, or connect to the GitHub anysearch skill.
+anysearch-skill is an optional search enhancement layer for HR SkillForge. Use it when the user asks to maximize source collection, run broad search, batch query many combinations, or connect to the GitHub anysearch skill.
 
 ## Role
 
@@ -72,7 +72,7 @@ powershell -ExecutionPolicy Bypass -File "$env:USERPROFILE\.codex\skills\anysear
 
 After installation, restart Codex so the new skill can be discovered automatically.
 
-## HR Nuwa Usage Pattern
+## HR SkillForge Usage Pattern
 
 1. Generate `research_plan/search_queries.csv`.
 2. Run anysearch against source-card-driven query groups first:
@@ -92,7 +92,7 @@ After installation, restart Codex so the new skill can be discovered automatical
 4. Export candidate results into `sources.csv`.
 5. Mark each row with source type: `web`, `pdf`, `video`, `transcript`, `podcast`, or `manual`.
 6. Preserve `source_card_type` when possible, so the pipeline can tell which evidence gap the source was meant to fill.
-7. Continue the normal HR Nuwa pipeline.
+7. Continue the normal HR SkillForge pipeline.
 
 ## Source Card Search Method
 
