@@ -1,0 +1,17 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+
+# Runtime and fetched evidence caches can be large and noisy.
+output/**
+
+# Keep the distilled Hay skill and its compact metadata/report artifacts.
+!output/
+!output/generated-skills/
+!output/generated-skills/hay/
+!output/generated-skills/hay/SKILL.md
+!output/generated-skills/hay/distillation-report.md
+!output/generated-skills/hay/quality-report.md
+!output/generated-skills/hay/sources.csv
+
