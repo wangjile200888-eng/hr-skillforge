@@ -19,7 +19,7 @@
   <a href="#how-to-use--如何使用">How to Use / 使用方法</a> ·
   <a href="#effect-examples--效果示例">Examples / 效果示例</a> ·
   <a href="#local-commands--本地运行命令">Local Commands / 本地命令</a> ·
-  <a href="#technical-innovations--技术创新">Innovation / 技术创新</a>
+  <a href="#technical-implementation--技术实现">Implementation / 技术实现</a>
 </p>
 
 ## How To Use / 如何使用
@@ -138,19 +138,95 @@ Generated output / 生成结果：
 output/generated-skills/hay/SKILL.md
 ```
 
-## Technical Innovations / 技术创新
+## Technical Implementation / 技术实现
 
-**1. Search as Evidence Hunting / 搜索不是找网页，是找证据**
+**1. Evidence-First Search Engine / 证据优先的搜索引擎**
 
-HR SkillForge does not only search keywords. It searches for missing source cards: official methodology, diagnostic questions, tools, cases, video transcripts, external boundaries, and China localization.  
-HR SkillForge 不只是搜关键词，而是按“缺哪类证据卡”去搜：官方方法论、诊断问题、工具模板、案例实践、视频字幕、外部边界、中国落地。
+Search is designed as a multi-layer evidence acquisition system, not a simple keyword lookup.  
+搜索不是简单关键词检索，而是一个多层证据采集系统。
 
-**2. Distillation as Skill Building / 蒸馏不是总结，是造一个能工作的 Skill**
+```text
+Search method / 搜索方法:
+Company aliases x HR topics x source types x time ranges x languages
+公司别名 x HR主题 x 资料类型 x 时间范围 x 语言
 
-It turns source cards into mental models, tool layers, workflows, deliverables, anti-patterns, and uncertainty boundaries. The output is a usable expert Skill, not a prettier research note.  
-它把 source cards 转成心智模型、工具层、工作流、交付物、反模式和不确定性边界。输出不是更漂亮的研究笔记，而是一个能工作的专家 Skill。
+Source-card search / 证据卡搜索:
+official_methodology, diagnostic_question, tool_template,
+case_practice, video_transcript, external_boundary, china_localization
 
-**3. Runtime With Source Recall / 使用时不凭印象，会回看蒸馏材料**
+Search terms / 搜索词:
+white paper, report, PDF, case study, webinar, podcast, transcript,
+framework, toolkit, maturity model, diagnostic, leadership, rewards,
+组织能力, 绩效管理, 薪酬激励, 领导力, 诊断表, 工具, 案例, 字幕
 
-When answering real questions, the generated Skill should consult its original sources, source cards, transcripts, and quality report before making strong claims.  
-真正解决问题时，生成的 Skill 不只调用“蒸馏后的印象”，还会回看原始资料、source cards、视频转写和质量报告，再给出判断。
+Search tools / 搜索工具:
+query matrix, anysearch-skill, browser search, official-site crawl,
+yt-dlp subtitles, manual sources
+
+Search scope / 搜索范围:
+official websites, PDFs, reports, YouTube, Bilibili, Vimeo, podcasts,
+LinkedIn Events, SHRM, Gartner HR, HR Tech, WorldatWork, CIPD, ATD,
+Thinkers50, TED, business-school lectures, Chinese HR platforms
+
+Search preference / 搜索偏好:
+official sources > video transcripts > tools/templates > cases >
+external critique > Chinese localization > generic summaries
+官方来源 > 视频字幕 > 工具模板 > 案例实践 > 外部评价 > 中国落地 > 泛泛摘要
+```
+
+**2. Distillation Architecture / 方法论蒸馏架构**
+
+HR SkillForge turns raw evidence into an executable expert Skill through a layered distillation pipeline.  
+HR SkillForge 通过分层蒸馏管线，把原始证据转成可执行的专家 Skill。
+
+```text
+Raw sources / 原始资料
+-> source cards / 证据卡
+-> evidence scoring / 证据评分
+-> seven research layers / 七类研究层
+-> mental models / 心智模型
+-> tool layer / 工具层
+-> diagnostic workflow / 诊断流程
+-> deliverables / 交付物
+-> anti-patterns / 反模式
+-> uncertainty boundary / 不确定性边界
+-> company-specific SKILL.md / 公司专属 Skill
+```
+
+The seven research layers are built to prevent shallow summarization.  
+七类研究层用于避免“浅层总结”：
+
+```text
+official methodology      官方方法论
+video transcripts         视频字幕
+case practices            案例实践
+tools and frameworks      工具框架
+external views            外部评价
+timeline                  时间线
+China localization        中国落地
+```
+
+The final Skill must contain not only concepts, but also tools: diagnostic canvases, evidence sheets, matrices, workflows, governance mechanisms, and delivery templates.  
+最终 Skill 不只保留概念，还必须沉淀工具：诊断画布、证据表、矩阵、工作流、治理机制和交付模板。
+
+**3. Runtime Evidence Recall / 运行时证据回看**
+
+Generated Skills are not allowed to answer only from memory. For complex problems, they should consult the original distillation materials before making strong claims.  
+生成后的 Skill 不能只凭“蒸馏后的印象”回答复杂问题，而要在强判断前回看原始蒸馏材料。
+
+```text
+Runtime recall / 运行时回看:
+sources.csv
+distillation report
+source cards
+web / PDF / transcript files
+quality report
+
+Answer boundary / 回答边界:
+Evidence-supported       资料支持
+Synthesized judgment     综合判断
+Professional inference   专业推断
+```
+
+This turns a generated Skill from a writing style into a traceable expert system: it knows where its claims came from, what is inferred, and what still needs verification.  
+这让生成后的 Skill 不只是“回答风格”，而是一个可追溯的专家系统：它知道判断来自哪里、哪些是推断、哪些还需要继续验证。
