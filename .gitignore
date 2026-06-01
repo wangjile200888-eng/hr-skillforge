@@ -1,8 +1,12 @@
 .env
 .venv/
+node_modules/
 __pycache__/
 *.pyc
+*.tsbuildinfo
 dist/
+web/dist/
+web/*.png
 
 # Runtime and fetched evidence caches can be large and noisy.
 output/**

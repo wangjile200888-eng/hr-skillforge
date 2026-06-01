@@ -108,6 +108,22 @@ Hay Skill / Hay 方法论 Skill
 
 ## Local Commands / 本地运行命令
 
+Run the web app / 运行网页工作台：
+
+```powershell
+cd web
+copy .env.example .env
+# edit .env and set VITE_GEMINI_API_KEY
+npm install
+npm run dev
+```
+
+Open / 打开：
+
+```text
+http://127.0.0.1:5173
+```
+
 Clone and install / 克隆并安装：
 
 ```powershell
