@@ -6,6 +6,71 @@ Forge company-specific HR expertise from public evidence.
 HR SkillForge turns public materials from consulting firms, benchmark companies, and HR software companies into usable company-specific HR methodology Skills. It is not a company-profile writer; it is designed to help users solve real problems in organization design, talent, performance, compensation, incentives, leadership, and HR transformation.  
 HR SkillForge 把咨询公司、标杆企业或 HR 软件公司的公开资料，锻造成可调用的 HR 方法论 Skill。重点不是写公司介绍，而是形成一个能帮助用户解决组织、人才、绩效、薪酬、激励、领导力和 HR 转型问题的专家型 Skill。
 
+## Quick Start / 使用方法
+
+Clone the repository and install dependencies.  
+克隆仓库并安装依赖：
+
+```powershell
+git clone https://github.com/wangjile200888-eng/hr-skillforge.git
+cd hr-skillforge
+pip install -r requirements.txt
+```
+
+Create a target workspace and generate the first search plan.  
+创建目标项目并生成第一轮搜索计划：
+
+```powershell
+python scripts/init_target.py --target "Hay" --type consulting_company
+python scripts/search_sources.py --target "Hay"
+```
+
+Review the generated query files, search and collect sources, then fill `sources.csv`.  
+查看生成的搜索文件，搜集资料，并填写 `sources.csv`：
+
+```text
+output/generated-skills/hay/research_plan/search_queries.csv
+output/generated-skills/hay/research_plan/source_card_search_queries.md
+output/generated-skills/hay/research_plan/video_search_queries.md
+output/generated-skills/hay/sources.csv
+```
+
+For larger search coverage, optionally install `anysearch-skill` and use it to batch search the source-card queries.  
+如果需要扩大搜索量，可以安装 `anysearch-skill`，用它批量执行 source-card 查询：
+
+```powershell
+$SkillRoot = "$env:USERPROFILE\.codex\skills"
+$TempDir = Join-Path $env:TEMP "anysearch-skill-install"
+New-Item -ItemType Directory -Force -Path $SkillRoot, $TempDir | Out-Null
+Invoke-WebRequest -Uri "https://github.com/anysearch-ai/anysearch-skill/archive/refs/heads/main.zip" -OutFile (Join-Path $TempDir "anysearch-skill.zip")
+Expand-Archive -Path (Join-Path $TempDir "anysearch-skill.zip") -DestinationPath $TempDir -Force
+Remove-Item -Recurse -Force (Join-Path $SkillRoot "anysearch") -ErrorAction SilentlyContinue
+Move-Item -Path (Join-Path $TempDir "anysearch-skill-main") -Destination (Join-Path $SkillRoot "anysearch")
+```
+
+Run the pipeline after `sources.csv` is ready.  
+`sources.csv` 准备好后，运行完整流程：
+
+```powershell
+python scripts/run_pipeline.py --target "Hay" --type consulting_company --mode mvp
+```
+
+The generated Skill will appear here.  
+生成后的 Skill 会出现在：
+
+```text
+output/generated-skills/hay/SKILL.md
+```
+
+Check the Hay example if you want to see a completed case first.  
+如果想先看完整案例，可以查看：
+
+```text
+examples/hay/SKILL.md
+examples/hay/distillation-report.md
+examples/hay/sources.csv
+```
+
 ## 1. Search Method / 搜索方法
 
 Search combines broad coverage with evidence-card gap filling.  
