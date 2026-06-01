@@ -14,13 +14,10 @@
 <p align="center"><strong>HR SkillForge helps HRDs, consultants, OD professionals, and founders distill consulting-firm and benchmark-company know-how into practical Skills.</strong></p>
 <p align="center"><strong>HR SkillForge 帮助 HRD、咨询顾问、组织发展从业者和创业者，把咨询公司与标杆企业的方法论蒸馏成可直接使用的 Skill。</strong></p>
 
-<p align="center">
-  <a href="examples/hay/SKILL.md">View Hay Example / 查看 Hay 案例</a> ·
-  <a href="#how-to-use--如何使用">How to Use / 使用方法</a> ·
-  <a href="#effect-examples--效果示例">Examples / 效果示例</a> ·
-  <a href="#local-commands--本地运行命令">Local Commands / 本地命令</a> ·
-  <a href="#technical-implementation--技术实现">Implementation / 技术实现</a>
-</p>
+**Navigation / 导航**
+
+`Hay Example / Hay 案例`: `examples/hay/SKILL.md`  
+`How To Use / 使用方法` · `Effect Examples / 效果示例` · `Local Commands / 本地命令` · `Technical Implementation / 技术实现`
 
 ## How To Use / 如何使用
 
