@@ -3,7 +3,7 @@
 ## Summary
 
 - Target type: consulting_company
-- Version: Light Version
+- Version: Light Version by automated local fetch; upgraded to Usable Candidate v2 after manual anysearch-assisted official-topic enrichment
 - Sources: 133 / 50
 - Video or transcript sources: 48 / 8
 - Downloaded subtitle files: 0
@@ -30,5 +30,5 @@
 
 ## Boundary
 
-If this report says Light Version, the generated Skill must not present its models as fully validated.
+If this report says Light Version, the generated Skill must not present its models as fully validated. In this example, the automated fetch remained Light because subtitles and some full pages were unavailable, while a second manual enrichment pass added official BCG topic evidence and upgraded practical usability to Usable Candidate v2.
 If this report says Usable Candidate, the generated Skill may be used, but must label model confidence.

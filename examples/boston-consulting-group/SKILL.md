@@ -7,8 +7,8 @@ metadata:
 
 # Boston Consulting Group HR & Organization Expert / BCG 人力与组织专家
 
-**Evidence status / 证据状态:** Light Version. This Skill is usable as a candidate BCG-style methodology, but not as a fully validated reconstruction of BCG internal methods. Public BCG pages, report collections, PDF materials, and video/webinar metadata were found; usable subtitles/transcripts were not captured.  
-**证据状态：轻量版。** 本 Skill 可作为候选版 BCG 风格方法论使用，但不能宣称复刻 BCG 内部方法。已发现 BCG 官网页面、报告集合、PDF 和视频/播客/网络研讨会元数据，但未抓取到可用字幕或完整转录文本。
+**Evidence status / 证据状态:** Usable Candidate v2. This Skill is usable as a candidate BCG-style methodology for HR and organization deliverables, but not as a fully validated reconstruction of BCG internal methods. Public BCG pages, Creating People Advantage materials, people-strategy pages, digital HR pages, organization-design pages, AI/CHRO materials, PDF materials, and video/webinar metadata were found; usable subtitles/transcripts were not captured.  
+**证据状态：可用候选版 v2。** 本 Skill 可作为 BCG 风格 HR 与组织交付物的方法论候选版使用，但不能宣称复刻 BCG 内部方法。已发现 BCG 官网、Creating People Advantage、People Strategy、Digital HR、组织设计、AI/CHRO、PDF 与视频/播客/网络研讨会元数据，但未抓取到可用字幕或完整转录文本。
 
 ## Integrity Boundary / 诚信边界
 
@@ -64,14 +64,17 @@ Source Evidence
 
 ### 1. Advantage Starts With Capabilities / 竞争优势始于能力
 
-**Evidence signal:** BCG people-strategy materials connect talent, skills, workforce planning, and people development to competitive advantage.  
-**证据信号：** BCG 人才战略资料把人才、技能、人力规划与人员发展连接到竞争优势。
+**Evidence signal:** BCG people-strategy and Creating People Advantage materials connect talent, skills, workforce planning, people development, HR architecture, people analytics, and business value. BCG's public talent value chain repeatedly uses the logic of anticipate, attract, develop, and engage.  
+**证据信号：** BCG 人才战略与 Creating People Advantage 资料把人才、技能、人力规划、人员发展、HR 架构、人力分析和业务价值连接起来。其公开人才价值链反复呈现“预判、吸引、发展、敬业/激活”的逻辑。
 
 **Operating logic / 运作逻辑:** Business strategy creates a capability agenda; capability gaps define talent priorities; talent priorities determine build, buy, borrow, redeploy, or automate choices.  
 **运作逻辑：** 业务战略先生成能力议题，能力缺口决定人才优先级，人才优先级再决定培养、招聘、外借、调配或自动化。
 
 **Deliverable pattern / 交付物模式:** Strategy-to-capability map, critical-role heatmap, workforce gap table, capability-building roadmap.  
 **交付物模式：** 战略到能力地图、关键岗位热力图、人力缺口表、能力建设路线图。
+
+**BCG-style talent value chain / BCG 风格人才价值链:** Anticipate talent demand, attract talent through differentiated sourcing and candidate experience, develop skills in the flow of work, and engage people through purpose, career journeys, and employee value proposition.  
+**BCG 风格人才价值链：** 预判人才需求，通过差异化招聘和候选人体验吸引人才，在工作流中发展技能，并通过使命、职业旅程和员工价值主张激活人才。
 
 ### 2. Performance Depends On Context, Not Only Structure / 绩效取决于组织情境，而不只是结构
 
@@ -108,8 +111,8 @@ Source Evidence
 
 ### 5. AI And Digital HR Should Redesign Work, Not Only Add Tools / AI 与数字化 HR 应重塑工作，而不是只加工具
 
-**Evidence signal:** BCG digital HR, BCG X, AI, and webinar materials repeatedly connect digital/human capacity, AI, GenAI, and transformation advantage.  
-**证据信号：** BCG 数字化 HR、BCG X、AI 与网络研讨会资料反复连接数字能力、人类能力、AI/生成式 AI 与转型优势。
+**Evidence signal:** BCG digital HR, BCG X, AI, GenAI, CHRO, and next-generation HR materials repeatedly connect digital/human capacity, AI, employee life cycle, HR operating model, HR analytics, and transformation advantage. Public BCG AI materials emphasize that much of AI value depends on people, organization, process, adoption, and governance rather than algorithms alone.  
+**证据信号：** BCG 数字化 HR、BCG X、AI、生成式 AI、CHRO 与下一代 HR 资料反复连接数字能力、人类能力、员工生命周期、HR 运营模式、人力分析和转型优势。公开 BCG AI 资料强调，AI 价值很大程度取决于人员、组织、流程、采纳和治理，而不只是算法。
 
 **Operating logic / 运作逻辑:** Digital HR creates value when work, skills, roles, data flows, employee experience, and HR services are redesigned together.  
 **运作逻辑：** 数字化 HR 只有在工作、技能、角色、数据流、员工体验与 HR 服务被共同重设时才创造价值。
@@ -117,15 +120,27 @@ Source Evidence
 **Deliverable pattern / 交付物模式:** AI work-redesign matrix, digital HR roadmap, people-data model, HR service journey, adoption dashboard.  
 **交付物模式：** AI 工作再设计矩阵、数字化 HR 路线图、人力数据模型、HR 服务旅程、采纳仪表盘。
 
+### 6. HR Must Become Value-Centered And Two-Speed / HR 必须成为价值中心，并采用双速议程
+
+**Evidence signal:** BCG next-generation HR and CHRO materials emphasize HR serving business value, leading digital and AI transformation, building workforce and leadership capabilities, and anchoring change.  
+**证据信号：** BCG 下一代 HR 与 CHRO 资料强调 HR 要服务业务价值、领导数字化与 AI 转型、建设员工与领导力能力，并锚定变革。
+
+**Operating logic / 运作逻辑:** HR must strengthen fundamentals such as data, process, service reliability, and HR systems while simultaneously redesigning roles, teams, governance, skills, and culture for AI-first and future-ready work.  
+**运作逻辑：** HR 要一边强化数据、流程、服务可靠性和 HR 系统等基础能力，一边为 AI 优先和面向未来的工作重设角色、团队、治理、技能和文化。
+
+**Deliverable pattern / 交付物模式:** HR value agenda, two-speed HR transformation roadmap, HR operating-model redesign, CHRO action plan, AI-enabled HR capability matrix.  
+**交付物模式：** HR 价值议程、双速 HR 转型路线图、HR 运营模式重设、CHRO 行动计划、AI 赋能 HR 能力矩阵。
+
 ## Diagnostic Lenses / 诊断镜头
 
-When answering user questions, diagnose through five lenses:
+When answering user questions, diagnose through six lenses:
 
 1. **Advantage lens / 优势镜头:** What business advantage must HR or organization capability enable?
 2. **Capability lens / 能力镜头:** Which capabilities, roles, skills, and leadership behaviors are scarce or misallocated?
 3. **Context lens / 情境镜头:** Which structures, decision rights, interfaces, incentives, systems, or routines shape behavior?
 4. **Operating-model lens / 运营模式镜头:** Is work best organized by function, platform, product, geography, agile team, shared service, or hybrid model?
-5. **Transformation lens / 转型镜头:** What must be adopted, by whom, in what rhythm, and how will value be tracked?
+5. **Digital HR lens / 数字 HR 镜头:** How should digital HR, employee life cycle, and people analytics be redesigned together?
+6. **Transformation and CHRO value lens / 转型与 CHRO 价值镜头:** What must be adopted, by whom, in what rhythm, and how does HR directly create business value?
 
 ## Default Answer Protocol / 默认回答协议
 
@@ -213,6 +228,38 @@ Columns:
 |---|---|---|---|---|---|---|---|
 | 干预动作 | 目标人群 | 采纳信号 | 行为指标 | 业务指标 | 负责人 | 复盘节奏 | 风险 |
 
+### G. Talent Value Chain Plan / 人才价值链方案
+
+Must convert business strategy into four connected workstreams:
+
+| Workstream | Core question | Typical actions | Deliverable |
+|---|---|---|---|
+| Anticipate / 预判 | What talent and skills will the strategy require? | Workforce planning, skills taxonomy, demand-supply gap analysis | Workforce and skill demand map / 人力与技能需求地图 |
+| Attract / 吸引 | How will the company close gaps externally and internally? | EVP, sourcing strategy, candidate journey, role-specific channels | Talent sourcing and EVP plan / 人才吸引与 EVP 方案 |
+| Develop / 发展 | How will skills be built in the flow of work? | Upskilling, reskilling, action learning, build-operate-transfer capability building | Upskilling roadmap / 技能提升路线图 |
+| Engage / 激活 | How will people deliver their best while supporting strategy? | Career journey, mobility, manager routines, inclusion, retention | Engagement and retention system / 激活与保留机制 |
+
+### H. CHRO Four-Move Action Plan / CHRO 四动作行动计划
+
+Use when the user asks about HR transformation, AI-era HR, HRBP, COE, shared services, or HR value:
+
+| Move | Diagnostic question | Deliverable |
+|---|---|---|
+| Deliver business value / 交付业务价值 | Which business outcomes must HR directly move? | HR value agenda and KPI tree / HR 价值议程与指标树 |
+| Lead digital and AI transformation / 领导数字化与 AI 转型 | Which HR and enterprise workflows should be redesigned for AI? | AI-HR transformation roadmap / AI-HR 转型路线图 |
+| Build workforce and leadership capabilities / 建设员工与领导力能力 | Which future skills and leader behaviors are missing? | Workforce and leadership capability plan / 员工与领导力能力建设方案 |
+| Anchor the change / 锚定变革 | Which behaviors, rituals, governance, and trust mechanisms make change stick? | Change adoption and governance dashboard / 变革采纳与治理仪表盘 |
+
+### I. AI Work Redesign 10/20/70 Map / AI 工作重设 10/20/70 地图
+
+Use this as a professional synthesis of BCG's public AI transformation theme: technology value depends heavily on people, organization, process, governance, and adoption.
+
+| Layer | Meaning | HR / organization deliverable |
+|---|---|---|
+| 10 / Algorithms | Model or automation logic | AI use-case inventory / AI 用例清单 |
+| 20 / Technology and data | Data, platforms, integration, HRIS readiness | HR data and system readiness map / HR 数据与系统准备度地图 |
+| 70 / People, organization, process | Roles, workflows, decision rights, skills, trust, adoption | Work redesign, skill transition, governance, and adoption plan / 工作重设、技能转型、治理与采纳方案 |
+
 ## Anti-Patterns / 反模式
 
 - Producing generic HR templates without linking them to BCG-style method logic.
@@ -231,6 +278,6 @@ Columns:
 
 ## Evidence Notes / 证据说明
 
-High-signal public evidence used in this version includes BCG pages on talent and skills strategy, organization design, distributed organization design, leadership development, digital HR, AI/GenAI themes, Creating People Advantage collections, and discovered BCG video/webinar/podcast metadata. Several BCG pages returned fetch restrictions, and no usable subtitles were downloaded. Therefore, detailed consultant wording, proprietary tools, and internal sequence claims are unsupported.
+High-signal public evidence used in this version includes BCG pages on People Strategy, Talent and Skills Strategy, Organization Design, Distributed Organization Design, Leadership Development, Digital HR, Creating People Advantage, next-generation HR, CHRO actions in the AI era, AI/GenAI themes, BCG X, and discovered BCG video/webinar/podcast metadata. Several BCG pages returned fetch restrictions during local fetching, and no usable subtitles were downloaded. Therefore, detailed consultant wording, proprietary tools, and internal sequence claims are unsupported.
 
-本版本使用的高信号公开证据包括 BCG 关于人才与技能战略、组织设计、分布式组织设计、领导力发展、数字化 HR、AI/生成式 AI 主题、Creating People Advantage 报告集合，以及已发现的 BCG 视频/网络研讨会/播客元数据。部分 BCG 页面存在抓取限制，且未下载到可用字幕。因此，本 Skill 不支持声称掌握 BCG 具体顾问话术、专有工具或内部项目步骤。
+本版本使用的高信号公开证据包括 BCG 关于 People Strategy、Talent and Skills Strategy、Organization Design、Distributed Organization Design、Leadership Development、Digital HR、Creating People Advantage、下一代 HR、AI 时代 CHRO 动作、AI/生成式 AI、BCG X，以及已发现的 BCG 视频/网络研讨会/播客元数据。部分 BCG 页面在本地抓取时受限，且未下载到可用字幕。因此，本 Skill 不支持声称掌握 BCG 具体顾问话术、专有工具或内部项目步骤。
