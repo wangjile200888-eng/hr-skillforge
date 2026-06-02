@@ -31,6 +31,8 @@ This Skill forges company-specific HR methodology Skills from public evidence ab
 - Do not summarize methodology without showing how it drives diagnosis, interventions, and deliverables.
 - Use public sources, user-authorized sources, and compliant video/audio/subtitle/transcript sources only.
 - Video, webinar, interview, podcast, and transcript sources are high-weight and must not be silently skipped.
+- Video/audio discovery is mandatory, but subtitle capture must be time-boxed and non-blocking. Failed subtitles become explicit evidence gaps, not silent blockers.
+- Distillation information volume still determines success or failure. Do not let non-blocking subtitle rules inflate quality: if usable evidence is thin, downgrade to `Usable Candidate` or `Light Version`.
 - Every source should become a source card; every core judgment should be traceable to evidence or explicitly marked as professional inference.
 - If evidence is insufficient, generate a `Light Version`; do not fabricate a complete methodology.
 - Do not bypass login, CAPTCHA, membership, private-video restrictions, paywalls, or platform controls.
@@ -133,6 +135,7 @@ Core source-card types:
 - `deliverable_pattern`: consulting deliverables, artifact structures, required fields, tables, dashboards, roadmaps.
 - `case_practice`: client cases, implementation paths, management actions.
 - `video_transcript`: webinars, podcasts, interviews, subtitles, transcripts.
+- `video_metadata`: video/podcast/webinar title, description, publisher, date, official page, playlist title, tags, chapters, and search snippets when transcript text is unavailable.
 - `external_boundary`: external views, controversy, limitations, failure conditions.
 - `china_localization`: China cases, Chinese wording, localization conversion.
 
@@ -152,6 +155,26 @@ Every deliverable pattern must be linked to at least one method principle and on
 ## Video / Audio / Subtitle Rules / 视频音频与字幕规则
 
 Video and audio are not auxiliary. Formal distillation must process at least one round of video/audio/subtitle or transcript source discovery.
+
+The principle is strict:
+
+```text
+video discovery is mandatory
+subtitle capture is time-boxed
+failed subtitles become video_metadata evidence
+video_metadata supports topic discovery, not content claims
+information volume still decides Skill quality
+```
+
+原则必须严格：
+
+```text
+视频发现必须做
+字幕抓取限时做
+字幕失败后降级为 video_metadata 证据
+video_metadata 只支持主题发现，不支持内容主张
+蒸馏信息量仍然决定 Skill 质量
+```
 
 Priority:
 
@@ -174,6 +197,100 @@ yt-dlp --skip-download --write-subs --write-auto-subs --sub-langs "en-orig,en,en
 
 If YouTube requires login or triggers anti-bot restrictions, stop automatic capture, record the item in `pending_transcription.md`, and ask the user for an authorized transcript, exported cookies file, or local file. Do not bypass platform controls.
 
+Subtitle capture must not block the full pipeline. Recommended limits:
+
+```text
+single video subtitle attempt: 60 seconds
+playlist subtitle attempt: 90 seconds
+entire subtitle stage: 8-10 minutes
+```
+
+字幕抓取不得阻塞完整流水线。建议限制：
+
+```text
+单个视频字幕尝试：60 秒
+播放列表字幕尝试：90 秒
+整个字幕阶段：8-10 分钟
+```
+
+Playlist handling:
+
+```text
+If URL is a YouTube/Bilibili playlist:
+-> do not fetch the entire playlist by default
+-> record the playlist as video_metadata
+-> sample only the first 3-5 highly relevant items when possible
+-> if sampling is slow, stop and log transcript_gap
+```
+
+播放列表处理：
+
+```text
+如果 URL 是 YouTube/Bilibili 播放列表：
+-> 默认不要抓取完整播放列表
+-> 将播放列表记录为 video_metadata
+-> 可行时最多抽取前 3-5 个高相关视频
+-> 如果抽取变慢，停止并记录 transcript_gap
+```
+
+When subtitles/transcripts fail, keep the source card but downgrade it:
+
+```text
+video candidate
+-> video_metadata source card
+-> topic signal
+-> search expansion clue
+-> transcript_gap
+-> confidence downgrade
+```
+
+当字幕/transcript 失败时，仍保留证据卡，但降级：
+
+```text
+视频候选
+-> video_metadata 证据卡
+-> 主题信号
+-> 扩展搜索线索
+-> transcript_gap
+-> 信心降级
+```
+
+`video_metadata` may be used only for:
+
+- topic discovery
+- official communication signal
+- search expansion
+- evidence gap logging
+- low-confidence source-card coverage
+
+`video_metadata` must not be used for:
+
+- direct quotation
+- detailed argument extraction
+- consultant wording
+- high-confidence methodology claims
+- detailed deliverable logic
+
+`video_metadata` 只能用于：
+
+- 主题发现
+- 官方传播信号
+- 扩展搜索
+- 记录证据缺口
+- 低信心证据卡覆盖
+
+`video_metadata` 不得用于：
+
+- 直接引用
+- 详细论点提炼
+- 顾问表达还原
+- 高信心方法论判断
+- 详细交付物逻辑
+
+If enough official/web/PDF evidence exists, continue generating the Skill and mark the transcript gap. If the transcript gap leaves the overall evidence base thin, downgrade quality or produce a `Light Version`.
+
+如果已有足够官方网页、报告、PDF 证据，可以继续生成 Skill，并标注 transcript 缺口。如果 transcript 缺口导致整体信息量不足，必须降级质量或生成 `Light Version`。
+
 After YouTube fails, immediately expand to:
 
 - Official transcript / webinar / podcast pages
@@ -181,6 +298,24 @@ After YouTube fails, immediately expand to:
 - Apple Podcasts / Spotify / Omny / podcast indexes
 - SHRM, Gartner HR, HR Tech, WorldatWork, CIPD, ATD
 - Thinkers50, TED/TEDx, business school public lectures
+
+For user visibility, each run should maintain a progress log or `progress.json` with:
+
+```json
+{
+  "stage": "video_subtitle_fetch",
+  "current": 12,
+  "total": 62,
+  "source_id": "src_0030",
+  "success": 1,
+  "failed": 8,
+  "timeout": 3,
+  "metadata_only": 50,
+  "next_action": "continue_after_timeout"
+}
+```
+
+为了让用户知道没有卡死，每次运行应维护进度日志或 `progress.json`，显示当前阶段、处理数量、成功、失败、超时、metadata-only 数量和下一步动作。
 
 ## Quality Gates / 质量门槛
 
@@ -190,6 +325,24 @@ Use three levels:
 - `Usable Candidate`: enough high-signal public sources for analysis and draft solution design, with confidence labels.
 - `Light Version`: sparse or weak evidence; generate candidate hypotheses and research summary only.
 
+Video evidence quality levels:
+
+| Level | Evidence | Allowed Use |
+|---|---|---|
+| High | official transcript or authorized transcript | method details, wording, sequence, examples |
+| Medium | subtitles or auto subtitles | topic and argument extraction with caveats |
+| Low | official video/podcast page without transcript | official communication signal and topic discovery |
+| Very low | title/search snippet only | search expansion clue only |
+
+视频证据质量等级：
+
+| 等级 | 证据 | 可用范围 |
+|---|---|---|
+| 高 | 官方 transcript 或授权 transcript | 方法细节、表达、顺序、案例 |
+| 中 | 字幕或自动字幕 | 带边界地提炼主题和观点 |
+| 低 | 无 transcript 的官方视频/播客页面 | 官方传播信号和主题发现 |
+| 很低 | 只有标题/搜索摘要 | 只能作为扩展搜索线索 |
+
 For international consulting companies, aim for:
 
 ```text
@@ -198,6 +351,10 @@ Usable Candidate: 20 total sources, 5 video/audio/transcript candidates, 10 offi
 ```
 
 Even when quantitative gates are met, mark transcript gaps if subtitles or full transcripts were not actually captured.
+
+Do not count `video_metadata` as equivalent to transcript evidence. It can help satisfy video discovery coverage, but it cannot raise content confidence by itself. If method principles or deliverable patterns rely mainly on video_metadata, downgrade confidence and continue searching for official text/PDF evidence.
+
+不要把 `video_metadata` 等同于 transcript 证据。它可以帮助满足“视频发现覆盖”，但不能单独提升内容信心。如果方法原则或交付物模式主要依赖 video_metadata，必须降低信心并继续寻找官方文字/PDF 证据。
 
 Add a method-deliverable integrity check:
 
