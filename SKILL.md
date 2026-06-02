@@ -18,8 +18,9 @@ This Skill forges company-specific HR methodology Skills from public evidence ab
 - For international targets, do not rely on Chinese target names as the primary query string. Chinese names can create encoding issues, irrelevant search results, and weak official-source recall.
 - Examples: `麦肯锡` -> primary search target `McKinsey`; aliases `麦肯锡`, `McKinsey & Company`, `McKinsey People & Organizational Performance`. `美世` -> `Mercer`. `光辉合益` / `Hay` -> `Korn Ferry Hay Group` or the best public English brand.
 - When running scripts, prefer `--mode full --depth standard` as the default. Escalate to `--depth deep` when the target is important, official sources are sparse, or the user asks for a complete playbook.
+- Default all user-facing outputs to bilingual Chinese and English. This includes generated `SKILL.md`, distillation reports, evidence summaries, quality notes, warnings, usage instructions, and final answers unless the user explicitly requests one language only.
 
-中文规则：默认做“全攻略蒸馏”，不要默认做 fast/MVP。蒸馏对象必须先确认英文公开名称；如果用户输入中文公司名或中文方法论名，要提醒使用者“将按英文公开名称搜索，中文作为别名补充”，再开始搜索和生成。
+中文规则：默认做“全攻略蒸馏”，不要默认做 fast/MVP。蒸馏对象必须先确认英文公开名称；如果用户输入中文公司名或中文方法论名，要提醒使用者“将按英文公开名称搜索，中文作为别名补充”，再开始搜索和生成。所有面向使用者的输出默认中英文双语，除非用户明确要求只用一种语言。
 
 ## Core Principles / 核心原则
 
@@ -162,6 +163,7 @@ Avoid using Chinese target names as the primary target for international compani
 
 The generated `SKILL.md` should include:
 
+- Bilingual Chinese and English throughout, especially headings, core conclusions, workflows, diagnostic questions, evidence boundaries, and usage instructions.
 - Evidence status and quality boundary.
 - Honest non-affiliation boundary.
 - Company-specific method families, not generic HR advice.
