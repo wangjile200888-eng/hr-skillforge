@@ -1,0 +1,15 @@
+{
+  "target": "Deloitte Human Capital",
+  "depth": "standard",
+  "queries": 70,
+  "candidate_results": 336,
+  "unique_urls": 212,
+  "added_sources": 212,
+  "provider_counts": {
+    "anysearch_video": 161,
+    "yt-dlp": 10,
+    "anysearch": 145,
+    "duckduckgo": 20,
+    "bing": 0
+  }
+}
