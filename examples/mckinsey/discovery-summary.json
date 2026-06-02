@@ -1,0 +1,15 @@
+{
+  "target": "McKinsey",
+  "depth": "standard",
+  "queries": 70,
+  "candidate_results": 335,
+  "unique_urls": 166,
+  "added_sources": 126,
+  "provider_counts": {
+    "anysearch_video": 95,
+    "yt-dlp": 5,
+    "anysearch": 190,
+    "duckduckgo": 45,
+    "bing": 0
+  }
+}
